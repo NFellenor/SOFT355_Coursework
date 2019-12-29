@@ -8,12 +8,10 @@ var User = mongoose.model("User", { //User model and attributes
 });
 
 var Plant = mongoose.model("Plant", { //Plant model and attributes
-    plantId: Number, 
-    filename: String,
+    source = String,
     plantName: String,
     latinName: String,
     type: String,
-    family: String,
     lifespan: Number,
     waterCycle: Number,
     hardiness: String,
@@ -34,6 +32,6 @@ var List = mongoose.model("List", { //List model and attributes
     listValues: [String]
 });
 
-module.exports.User = User;
-module.exports.Plant = Plant;
-module.exports.List = List;
+module.exports.User = userSchema;
+module.exports.Plant = plantSchema;
+module.exports.List = listSchema;
