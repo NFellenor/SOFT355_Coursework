@@ -1,6 +1,7 @@
 var express = require("express");
 var mongoose = require("mongoose");
-var db = require("./db");
+var db = require("./db.js");
+var schema = require("./Schema.js");
 
 var uri = "mongodb+srv://DbUserNF:<password>@soft355-dgfnc.mongodb.net/test?retryWrites=true&w=majority"; //Mongo DB URI
 
@@ -11,9 +12,9 @@ app.listen('9000', function(){
     console.log("Connected to DB");
 });
 
-app.use(express.static("resources"));
+app.use(express("resources"));
 
-app.get("/card/:id", function(request, response) { //Edit
+app.get("/plant/:", function(request, response) { //Edit
     db.getCard(request.params.id).then(function(card) {
         response.redirect("/" + card.filename);
     });
@@ -30,3 +31,7 @@ app.get("/newgame", function(request, response) { //Edit
     // Some output for the interested reader...
     console.log("Listening on 9000");
 })
+
+
+//google ajax and jquery to get onto html page
+//api endpoint to pass data from server to client 

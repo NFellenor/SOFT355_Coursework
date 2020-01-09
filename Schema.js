@@ -33,6 +33,6 @@ var List = mongoose.model("List", { //List model and attributes
     listValues: [String],
 });
 
-module.exports.User = userSchema; //Export to be used as userSchema import
-module.exports.Plant = plantSchema;
-module.exports.List = listSchema;
+module.exports.User = User; //Export to be used as userSchema import
+module.exports.Plant = Plant;
+module.exports.List = List;
