@@ -4,7 +4,10 @@
   "description": "Distributed application development - web based interactive project",
   "main": "PLANT_DATA.js",
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "express": "^4.17.1",
+    "mocha": "^7.0.0",
     "mongodb": "^3.4.1",
     "mongoose": "^5.8.6",
     "npm": "^6.13.4",
