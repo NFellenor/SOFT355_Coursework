@@ -1,6 +1,6 @@
 var Schema = require("./Schema");
 
-async function getCard(id) {
+async function getPlant(id) {
     return await schemas.Plant.findOne({"id": id}); //Search schema file with associated parameters
 }
 

@@ -1,7 +1,6 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var db = require("./db");
-var logic = require("./logic");
 
 var uri = "mongodb+srv://DbUserNF:<password>@soft355-dgfnc.mongodb.net/test?retryWrites=true&w=majority"; //Mongo DB URI
 
@@ -14,13 +13,13 @@ app.listen('9000', function(){
 
 app.use(express.static("resources"));
 
-app.get("/card/:id", function(request, response) {
+app.get("/card/:id", function(request, response) { //Edit
     db.getCard(request.params.id).then(function(card) {
         response.redirect("/" + card.filename);
     });
 });
 
-app.get("/newgame", function(request, response) {
+app.get("/newgame", function(request, response) { //Edit 
     logic.newGame().then(function(game) {
         console.log("created a new game: " + game._id);
         response.contentType("application/json");
