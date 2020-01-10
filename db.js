@@ -5,7 +5,7 @@ async function getPlant(v) { //Asynchronous function
 };
 
 async function getUser(userNameInp) {
-    return await Schema.User.findOne({"userNameInp": userNameInp}); //Search User in schema file with associated parameters.
+    return await Schema.User.findOne({"userNameInp": userNameInp}); //Search User from schema file with associated parameters.
 };
 
 module.exports.getPlant = getPlant;

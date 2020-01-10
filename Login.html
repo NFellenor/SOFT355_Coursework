@@ -63,17 +63,18 @@
 </style>
 
 <div class="credentialsDiv">
-	<form>
+	<form method = "POST" action="/login"> <!-- take to API route /login -->
 		Username:<br>	
-		<input type="text" name="username" id="username"/><br>
+		<input type="text" name="usernameVal" id="username"/><br>
 		Password:<br>
-		<input type="password" name="password" id="password"/><br>
+		<input type="password" name="passwordVal" id="password"/><br>
+		<input type="submit" id="submit"/>
 	</form>
 </div>
 
 <!-- SUBMITDIV -->
 <style>
-	.submitDiv {
+	.errorDiv {
 	position: absolute;
 	height: 75px;
 	width: 100%;
@@ -87,8 +88,7 @@
 </style>
 
 <!--  -->
-<div class="submitDiv">
-	<button class="submit" type="button" onclick="">Submit</button>
+<div class="errorDiv">
 	<p hidden>Invalid password or username, try again.</p> <!-- Initially hidden login error message -->
 </div>
 

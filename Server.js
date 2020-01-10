@@ -17,30 +17,24 @@ var listener = app.listen('9000', function(){
 
 app.use(express("resources"));
 
-app.get("/plant", function(request, response){
-    db.getPlant(request.body._id).then(function(plant) {
-        response.send(plant);
+app.get("/plant", function(request, response){ //GET from db
+    db.getPlant(request.body._id).then(function(Plant) {
+        response.send(Plant); //Send to whatever uses this API route 
         console.log("GET Plant finished");
     });
 });
 
 //take userName and password input and input into variables 
-app.get("/login"), function(request, response){
-    var userNameInp = request.body.username;
-    var passwordInp = request.body.password;
+app.post("/login"), function(request, response){
+    var userNameInp = request.body.usernameVal; //Take value from username input box in login html assign to userNameInp
+    var passwordInp = request.body.password; //Take value from password input box in login html assign to passwordInp
+    db.getUser(userNameInp).then(function(User){
+        if (userNameInp == User.username && passwordInp == User.password) {
+        response.redirect(Landing_Page.html); //Redirect to landing page if username and password match a users attributes on the database
+        }
+    }) 
 }
 
-app.get("/user", function(request, response){
-    db.getUser(request.body._id).then(function(plant) {
-        response.send();
-        console.log("GET Plant finished");
-    });
-});
-
-app.post
 module.exports.listener = listener; //Export listener for testing
-
-//google ajax and jquery to get onto html page
-//api endpoint to pass data from server to client 
 
 //create json user object, takes input of username and password, IF input = object.username & password = 
