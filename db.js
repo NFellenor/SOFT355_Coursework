@@ -1,4 +1,4 @@
-var Schema = require("./Schema");
+var schema = require("./Schema");
 
 async function getPlant(v) { //Asynchronous function 
     return await Schema.Plant.find(v); //Return all plant object attributes and documents from database using plant definition from schema.  
