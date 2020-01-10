@@ -6,7 +6,7 @@ var schema = require("./Schema.js");
 var app = express();
 var uri = "mongodb+srv://DbUserNF:MSDOSislife50@soft355-dgfnc.mongodb.net/test?retryWrites=true&w=majority"; //Mongo DB URI
 
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise; //Used in attempt to fix timeout inducing error
 
 var listener = app.listen('9000', function(){
     mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true}).then((test) => {
