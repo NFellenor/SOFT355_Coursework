@@ -2,7 +2,6 @@
 var mongoose = require("mongoose");
 
 var User = mongoose.model("User", { //User model and attributes
-   // userId: Number,
     userName: String,
     password: String,
     notes: [String],

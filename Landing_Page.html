@@ -46,7 +46,6 @@
 	.ulAccount {
 	list-style-type: none;
 	position: relative;
-	test-align: right;	
 	display: inline;
 	margin: 10px 0;
 	padding: 10px 10px;
@@ -57,10 +56,8 @@
 	.account {
 	display: inline;
 	position: relative;
-	test-align: right;
 	top: -30px;
 	background-color: #d4d4d6;
-	font-color: black;
 	text-decoration: none;
 	font-family: Segoe UI Light;
 	font-weight: bold;
@@ -70,10 +67,10 @@
 
 <!-- HEADER & LOG OUT SIT IN THIS DIV -->
 <div class="headerDiv">
-<h1>Plant Encyclopedia</h1>
-<ul class="ulAccount">
-	<li class="account"><a href="">Log Out</a></li>
-</ul>
+	<h1>Plant Encyclopedia</h1>
+	<ul class="ulAccount">
+		<li class="account"><a href="">Log Out</a></li>
+<	/ul>
 </div>
 
 <!-- PURELY AESTHETIC DIV USED TO FILL COLOR ON LEFT-HAND OPTIONS-->
@@ -100,7 +97,14 @@
 	width: 100%;
 	height: 10%;	
 	background-color: #12BB39;
+	font-family: arial;
+	font-size: 16px;
 	}
+
+	.searchInput {
+		font-size: 12px;
+	}	
+
 </style>
 
 <div class="filterDiv">
@@ -125,11 +129,11 @@
 							<option value="Tropical">Tropical</option>
 						  </select>
 				  </th>
-				  <th>
-						<form>
+				  <th class="searchInput">
+						<form class="searchInput">
 								Plant Name:<br>	
 								<input type="text" name="plantName" id="plantName"/><br>
-							</form>
+						</form>
 				  </th>
 				  <th>
 						<button class="search" type="button" name="searchBtn" onclick="">Search</button>
@@ -145,10 +149,10 @@
 	left: 10%;
 	top: 15%;
 	background-color: #12BB39;
-	test-align: center;
 	height: 85%;
 	width: 90%;
 	border: solid black 1px;
+	font-family: arial;
 	}
 </style>
 
@@ -191,7 +195,6 @@
 	display: block;
 	color: black;
 	font-family: arial;
-	test-align: left;
 	padding: 14px 20px;
 	text-decoration: none;
 	}
