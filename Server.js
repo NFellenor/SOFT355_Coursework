@@ -36,5 +36,3 @@ app.post("/login"), function(request, response){
 }
 
 module.exports.listener = listener; //Export listener for testing
-
-//create json user object, takes input of username and password, IF input = object.username & password = 
