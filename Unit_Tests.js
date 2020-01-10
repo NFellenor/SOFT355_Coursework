@@ -7,9 +7,6 @@ var chaiHttp = require("chai-http");
 var listener = require("./Server.js"); //Require listener variable from Server
 var server = require("./Server.js");
 
-
-request(server).expect.to.have.status(200);
-
 it('Should list all plants', function(complete) {
     chai.request(server) //Request from server
       .get('/plant') //Make get request to /plant
